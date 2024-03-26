@@ -11,7 +11,7 @@ protocol movieDataLoader {
     static func getData() -> [Movie]
 }
 
-struct MoviesSampleData: movieDataLoader {
+enum MoviesSampleData: movieDataLoader {
     static func getData() -> [Movie] {
         return [
             Movie(id: UUID(), title: "AMAR", year: "2017", genre: "Romantic", description: "Laura and Carlos love each other as if every day was the last, and perhaps that first love intensity is what will tear them apart a year later.", thumbURL: "https://www.imdb.com/title/tt5479616/mediaviewer/rm1594897664/?ref_=tt_ov_i"),
