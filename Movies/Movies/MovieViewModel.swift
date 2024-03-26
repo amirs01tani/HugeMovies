@@ -7,7 +7,8 @@
 
 import Foundation
 
-class MovieViewModel {
+struct MovieViewModel: Identifiable, Hashable {
+    
     let id: UUID
     let title: String
     let year: String

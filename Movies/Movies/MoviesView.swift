@@ -10,12 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var viewModel = MoviesViewModel(movies: MoviesSampleData.getData())
     var body: some View {
-        VStack {
+        NavigationSplitView {
+            List(viewModel.movies) { movie in
+                NavigationLink(movie.title, value: movie)
+            }.navigationTitle("Movies")
+        } detail: {
             
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView(viewModel: MoviesViewModel(movies: MoviesSampleData.getData()))
