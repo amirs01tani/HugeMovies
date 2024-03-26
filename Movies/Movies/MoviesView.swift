@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MoviesView: View {
     var viewModel = MoviesViewModel(movies: MoviesSampleData.getData())
     var body: some View {
         NavigationSplitView {
@@ -22,5 +22,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView(viewModel: MoviesViewModel(movies: MoviesSampleData.getData()))
+    MoviesView(viewModel: MoviesViewModel(movies: MoviesSampleData.getData()))
 }
