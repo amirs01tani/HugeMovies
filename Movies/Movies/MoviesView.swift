@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var viewModel = MoviesViewModel(movies: MoviesSampleData.getData())
+    var viewModel = MoviesViewModel(movies: MoviesSampleData.getData())
     var body: some View {
         VStack {
             
