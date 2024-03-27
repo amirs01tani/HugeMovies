@@ -12,7 +12,7 @@ func makeImageView(imageURL: String, blurRadius: CGFloat = 4.0, height: CGFloat)
     AsyncImage(url: URL(string: imageURL)) { image in
         image.resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: .infinity, height: height)
+            .frame(height: height)
             .blur(radius: blurRadius)
     } placeholder: {
         ProgressView()

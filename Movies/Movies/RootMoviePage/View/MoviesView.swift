@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct MoviesView<Content: View>: View {
-    
-    @State private var selectedMovie: MovieViewModel?
-    
-    var viewModel = MoviesViewModel(loader: MoviesSampleData())
-    
+    @State var viewModel = MoviesViewModel(loader: MoviesSampleData())
     let content: (MovieViewModel) -> Content
     
     var body: some View {
         NavigationSplitView {
-            List(viewModel.fetchData(), selection: $selectedMovie) { movie in
+            List(viewModel.fetchData(), selection: $viewModel.selectedMovie) { movie in
                 NavigationLink(value: movie) {
                     MovieCellView(movieViewModel: movie)
                 }
             }
             .navigationTitle(viewModel.navTitle)
         } detail: {
-            if let selected = selectedMovie {
+            if let selected = viewModel.selectedMovie {
                 content(selected)
             }
         }

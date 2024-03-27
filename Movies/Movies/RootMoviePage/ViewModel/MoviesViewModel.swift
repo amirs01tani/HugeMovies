@@ -7,8 +7,9 @@
 
 import Foundation
 
-class MoviesViewModel {
+@Observable class MoviesViewModel {
     let loader: MovieDataLoader
+    var selectedMovie: MovieViewModel?
     
     init(loader: MovieDataLoader) {
         self.loader = loader
