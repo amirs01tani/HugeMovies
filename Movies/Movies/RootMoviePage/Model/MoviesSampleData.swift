@@ -11,7 +11,7 @@ protocol movieDataLoader {
     static func getData() -> [Movie]
 }
 
-enum MoviesSampleData: movieDataLoader {
+struct MoviesSampleData: movieDataLoader {
     static func getData() -> [Movie] {
         return [
             Movie(id: UUID(),
@@ -72,5 +72,13 @@ enum MoviesSampleData: movieDataLoader {
                   thumbURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRykPVBIqLOJnxvRn_bdc351Pi8XlGNE38VwhuXd4w&usqp=CAE&s")
             
         ]
+    }
+    subscript(id: UUID) -> MovieViewModel? {
+        if let movie = MoviesSampleData.getData().first (where: { movie in
+            movie.id == id
+        }) {
+            return MovieViewModel(movie: movie)
+        }
+        return nil
     }
 }

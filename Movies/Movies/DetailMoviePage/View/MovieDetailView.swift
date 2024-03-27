@@ -12,7 +12,7 @@ struct MovieDetailView: View {
     var viewModel: MovieViewModel
     
     var body: some View {
-        VStack {
+        ScrollView {
             HStack {
                 textWithBorderedBackground(title: viewModel.genre)
                 textWithBorderedBackground(title: viewModel.year)
@@ -24,7 +24,7 @@ struct MovieDetailView: View {
                 .frame(height: 500)
             
         }.padding(.horizontal, 24)
-            .navigationTitle(viewModel.title)
+        .navigationTitle(viewModel.title)
     }
 }
 

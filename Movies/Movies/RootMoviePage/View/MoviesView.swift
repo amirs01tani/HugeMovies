@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct MoviesView: View {
+struct MoviesView<Content: View>: View {
     
     @State private var selectedMovie: MovieViewModel?
-    @State private var path: [MovieViewModel] = []
     
     var viewModel = MoviesViewModel(movies: MoviesSampleData.getData())
+    let content: (MovieViewModel) -> Content
+    
     var body: some View {
         NavigationSplitView {
             List(viewModel.movies, selection: $selectedMovie) { movie in
@@ -22,10 +23,8 @@ struct MoviesView: View {
             }
             .navigationTitle("Movies")
         } detail: {
-            NavigationStack(path: $path) {
-                if let selected = selectedMovie {
-                    MovieDetailView(viewModel: selected)
-                }
+            if let selected = selectedMovie {
+                content(selected)
             }
         }
     }
@@ -74,5 +73,7 @@ func textWithBorderedBackground(title: String) -> some View {
 }
 
 #Preview {
-    MoviesView(viewModel: MoviesViewModel(movies: MoviesSampleData.getData()))
+    MoviesView(viewModel: MoviesViewModel(movies: MoviesSampleData.getData())){ selected in
+    MovieDetailView(viewModel: selected)
+    }
 }
