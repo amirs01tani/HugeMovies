@@ -26,7 +26,6 @@ enum Page: Identifiable, Hashable {
         switch page {
         case .root:
             MoviesView<MovieDetailView> { selectedMovie in
-                self.path.append(selectedMovie.id)
                 return MovieDetailView(viewModel: selectedMovie)
             }
         }
