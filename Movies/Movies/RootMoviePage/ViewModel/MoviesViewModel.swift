@@ -19,6 +19,8 @@ class MoviesViewModel {
     }
     
     var navTitle: String {
+        // place to add localization logic if needed
         "Movies"
     }
+    
 }

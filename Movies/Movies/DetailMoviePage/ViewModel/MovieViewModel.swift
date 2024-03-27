@@ -26,6 +26,10 @@ struct MovieViewModel: Identifiable, Hashable {
     }
     
     var navTitle: String {
+        title
+    }
+    
+    var cellYear: String {
         "Year: \(year)"
     }
 }

@@ -14,15 +14,13 @@ struct MoviesView<Content: View>: View {
     var viewModel = MoviesViewModel(loader: MoviesSampleData())
     
     let content: (MovieViewModel) -> Content
-    let backgroundImageHeight: CGFloat = 218
-    let cellHeight: CGFloat = 220
     
     var body: some View {
         NavigationSplitView {
             List(viewModel.fetchData(), selection: $selectedMovie) { movie in
                 NavigationLink(value: movie) {
-                    cellView(movieViewModel: movie)
-                }.background(makeImageView(imageURL: movie.thumbURL, height: backgroundImageHeight))
+                    MovieCellView(movieViewModel: movie)
+                }
             }
             .navigationTitle(viewModel.navTitle)
         } detail: {
