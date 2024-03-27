@@ -31,26 +31,6 @@ struct MoviesView<Content: View>: View {
     }
 }
 
-// MARK: - Helpers
-
-
-private func cellView(movie: MovieViewModel) -> some View {
-    VStack(alignment: .leading) {
-        textWithBorderedBackground(title: movie.title)
-            .foregroundStyle(.primary)
-            .font(.title)
-            .padding([.top], 8)
-        Spacer()
-        HStack {
-            Spacer()
-            textWithBorderedBackground(title: "Year: \(movie.year)")
-                .foregroundStyle(.secondary)
-                .padding(.bottom, 8)
-                
-        }
-    }.frame(height: 220)
-}
-
 func textWithBorderedBackground(title: String) -> some View {
     Text(title)
         .bold()
