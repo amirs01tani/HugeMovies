@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol movieDataLoader {
-    static func getData() -> [Movie]
+protocol MovieDataLoader {
+    func getData() -> [Movie]
 }
 
-struct MoviesSampleData: movieDataLoader {
-    static func getData() -> [Movie] {
+struct MoviesSampleData: MovieDataLoader {
+    func getData() -> [Movie] {
         return [
             Movie(id: UUID(),
                   title: "Damsel",

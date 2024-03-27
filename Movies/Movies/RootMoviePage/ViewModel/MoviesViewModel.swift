@@ -8,10 +8,14 @@
 import Foundation
 
 class MoviesViewModel {
-    let movies: [MovieViewModel]
+    let loader: MovieDataLoader
     
-    init(movies: [Movie]) {
-        self.movies = movies.map{ MovieViewModel(movie: $0) }
+    init(loader: MovieDataLoader) {
+        self.loader = loader
+    }
+    
+    func fetchData() -> [MovieViewModel] {
+        loader.getData().map({ MovieViewModel(movie: $0) })
     }
     
     var navTitle: String {

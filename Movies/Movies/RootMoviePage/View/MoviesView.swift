@@ -11,7 +11,7 @@ struct MoviesView<Content: View>: View {
     
     @State private var selectedMovie: MovieViewModel?
     
-    var viewModel = MoviesViewModel(movies: MoviesSampleData.getData())
+    var viewModel = MoviesViewModel(loader: MoviesSampleData())
     
     let content: (MovieViewModel) -> Content
     let backgroundImageHeight: CGFloat = 218
@@ -19,7 +19,7 @@ struct MoviesView<Content: View>: View {
     
     var body: some View {
         NavigationSplitView {
-            List(viewModel.movies, selection: $selectedMovie) { movie in
+            List(viewModel.fetchData(), selection: $selectedMovie) { movie in
                 NavigationLink(value: movie) {
                     cellView(movieViewModel: movie)
                 }.background(makeImageView(imageURL: movie.thumbURL, height: backgroundImageHeight))
@@ -34,7 +34,7 @@ struct MoviesView<Content: View>: View {
 }
 
 #Preview {
-    MoviesView(viewModel: MoviesViewModel(movies: MoviesSampleData.getData())){ selected in
+    MoviesView(viewModel: MoviesViewModel(loader: MoviesSampleData())){ selected in
     MovieDetailView(viewModel: selected)
     }
 }

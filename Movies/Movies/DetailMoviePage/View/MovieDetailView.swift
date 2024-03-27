@@ -30,5 +30,5 @@ struct MovieDetailView: View {
 }
 
 #Preview {
-    MovieDetailView(viewModel: MovieViewModel(movie: MoviesSampleData.getData()[0]))
+    MovieDetailView(viewModel: MovieViewModel(movie: MoviesSampleData().getData()[0]))
 }
