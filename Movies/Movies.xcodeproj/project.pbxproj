@@ -19,8 +19,9 @@
 		29673EFC2BB3DBC000005D42 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29673EF22BB3DB5500005D42 /* MovieViewModel.swift */; };
 		29673F052BB40F7600005D42 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29673F042BB40F7600005D42 /* AppCoordinator.swift */; };
 		29673F072BB416E200005D42 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29673F062BB416E200005D42 /* CoordinatorView.swift */; };
-		29673F0A2BB428B500005D42 /* AsyncImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29673F092BB428B500005D42 /* AsyncImagePresenter.swift */; };
+		29673F0A2BB428B500005D42 /* AsyncImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29673F092BB428B500005D42 /* AsyncImageBuilder.swift */; };
 		29673F0C2BB4293B00005D42 /* MoviesView+CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29673F0B2BB4293B00005D42 /* MoviesView+CellBuilder.swift */; };
+		29673F0E2BB42A0900005D42 /* CustomTextViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29673F0D2BB42A0900005D42 /* CustomTextViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +58,9 @@
 		29673EF82BB3DB5500005D42 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		29673F042BB40F7600005D42 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		29673F062BB416E200005D42 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
-		29673F092BB428B500005D42 /* AsyncImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImagePresenter.swift; sourceTree = "<group>"; };
+		29673F092BB428B500005D42 /* AsyncImageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageBuilder.swift; sourceTree = "<group>"; };
 		29673F0B2BB4293B00005D42 /* MoviesView+CellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesView+CellBuilder.swift"; sourceTree = "<group>"; };
+		29673F0D2BB42A0900005D42 /* CustomTextViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +110,10 @@
 		29673EB22BB30C4900005D42 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				29673F082BB4288600005D42 /* SharedViewHelpers */,
 				29673EB32BB30C4900005D42 /* MoviesApp.swift */,
 				29673F042BB40F7600005D42 /* AppCoordinator.swift */,
 				29673F062BB416E200005D42 /* CoordinatorView.swift */,
+				29673F082BB4288600005D42 /* SharedViewHelpers */,
 				29673EEE2BB3DB0F00005D42 /* RootMoviePage */,
 				29673EEF2BB3DB3700005D42 /* DetailMoviePage */,
 				29673EB72BB30C4A00005D42 /* Assets.xcassets */,
@@ -217,7 +219,8 @@
 		29673F082BB4288600005D42 /* SharedViewHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				29673F092BB428B500005D42 /* AsyncImagePresenter.swift */,
+				29673F092BB428B500005D42 /* AsyncImageBuilder.swift */,
+				29673F0D2BB42A0900005D42 /* CustomTextViewBuilder.swift */,
 			);
 			path = SharedViewHelpers;
 			sourceTree = "<group>";
@@ -352,8 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29673F0E2BB42A0900005D42 /* CustomTextViewBuilder.swift in Sources */,
 				29673F052BB40F7600005D42 /* AppCoordinator.swift in Sources */,
-				29673F0A2BB428B500005D42 /* AsyncImagePresenter.swift in Sources */,
+				29673F0A2BB428B500005D42 /* AsyncImageBuilder.swift in Sources */,
 				29673F072BB416E200005D42 /* CoordinatorView.swift in Sources */,
 				29673EFB2BB3DBBD00005D42 /* MovieDetailView.swift in Sources */,
 				29673F0C2BB4293B00005D42 /* MoviesView+CellBuilder.swift in Sources */,

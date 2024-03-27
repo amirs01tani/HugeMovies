@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-func imageView(imageURL: String, blurRadius: CGFloat = 4.0, height: CGFloat) -> some View {
+func makeImageView(imageURL: String, blurRadius: CGFloat = 4.0, height: CGFloat) -> some View {
     // we can use cache mechanism to enhance the network performance and reduce the network calls
     AsyncImage(url: URL(string: imageURL)) { image in
         image.resizable()

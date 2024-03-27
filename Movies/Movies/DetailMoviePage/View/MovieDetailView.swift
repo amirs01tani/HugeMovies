@@ -14,13 +14,13 @@ struct MovieDetailView: View {
     var body: some View {
         ScrollView {
             HStack {
-                textWithBorderedBackground(title: viewModel.genre)
-                textWithBorderedBackground(title: viewModel.year)
+                makeTextWithBorderedBackground(title: viewModel.genre)
+                makeTextWithBorderedBackground(title: viewModel.year)
                 Spacer()
             }
             Text(viewModel.description)
                 .font(.subheadline)
-            imageView(imageURL: viewModel.thumbURL, blurRadius: 0, height: 500)
+            makeImageView(imageURL: viewModel.thumbURL, blurRadius: 0, height: 500)
                 .frame(height: 500)
             
         }.padding(.horizontal, 24)

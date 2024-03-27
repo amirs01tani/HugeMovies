@@ -8,20 +8,20 @@
 import SwiftUI
 
 extension MoviesView {
-    func cellView(movie: MovieViewModel) -> some View {
+    func cellView(movieViewModel: MovieViewModel) -> some View {
         VStack(alignment: .leading) {
-            textWithBorderedBackground(title: movie.title)
+            makeTextWithBorderedBackground(title: movieViewModel.title)
                 .foregroundStyle(.primary)
                 .font(.title)
                 .padding([.top], 8)
             Spacer()
             HStack {
                 Spacer()
-                textWithBorderedBackground(title: "Year: \(movie.year)")
+                makeTextWithBorderedBackground(title: movieViewModel.navTitle)
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 8)
                 
             }
-        }.frame(height: 220)
+        }.frame(height: cellHeight)
     }
 }

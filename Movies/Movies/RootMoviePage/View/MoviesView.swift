@@ -14,31 +14,23 @@ struct MoviesView<Content: View>: View {
     var viewModel = MoviesViewModel(movies: MoviesSampleData.getData())
     
     let content: (MovieViewModel) -> Content
+    let backgroundImageHeight: CGFloat = 218
+    let cellHeight: CGFloat = 220
     
     var body: some View {
         NavigationSplitView {
             List(viewModel.movies, selection: $selectedMovie) { movie in
                 NavigationLink(value: movie) {
-                    cellView(movie: movie)
-                }.background(imageView(imageURL: movie.thumbURL, height: 218))
+                    cellView(movieViewModel: movie)
+                }.background(makeImageView(imageURL: movie.thumbURL, height: backgroundImageHeight))
             }
-            .navigationTitle("Movies")
+            .navigationTitle(viewModel.navTitle)
         } detail: {
             if let selected = selectedMovie {
                 content(selected)
             }
         }
     }
-}
-
-func textWithBorderedBackground(title: String) -> some View {
-    Text(title)
-        .bold()
-        .padding(4)
-        .background(content: { RoundedRectangle(cornerRadius: 6).strokeBorder(.separator)
-                .fill(.ultraThinMaterial)
-        })
-    
 }
 
 #Preview {

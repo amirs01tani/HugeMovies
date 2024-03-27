@@ -24,4 +24,8 @@ struct MovieViewModel: Identifiable, Hashable {
         self.description = movie.description ?? ""
         self.thumbURL = movie.thumbURL ?? ""
     }
+    
+    var navTitle: String {
+        "Year: \(year)"
+    }
 }
