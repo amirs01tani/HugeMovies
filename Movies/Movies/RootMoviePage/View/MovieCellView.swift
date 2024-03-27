@@ -15,14 +15,16 @@ struct MovieCellView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            makeTextWithBorderedBackground(title: movieViewModel.title)
+            Text(movieViewModel.title)
+                .customText()
                 .foregroundStyle(.primary)
                 .font(.title)
                 .padding([.top], 8)
             Spacer()
             HStack {
                 Spacer()
-                makeTextWithBorderedBackground(title: movieViewModel.cellYear)
+                Text(movieViewModel.cellYear)
+                    .customText()
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 8)
                 

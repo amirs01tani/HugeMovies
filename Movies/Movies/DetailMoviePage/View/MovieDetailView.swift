@@ -15,8 +15,10 @@ struct MovieDetailView: View {
     var body: some View {
         ScrollView {
             HStack {
-                makeTextWithBorderedBackground(title: viewModel.genre)
-                makeTextWithBorderedBackground(title: viewModel.year)
+                Text(viewModel.genre)
+                    .customText()
+                Text(viewModel.year)
+                    .customText()
                 Spacer()
             }
             Text(viewModel.description)

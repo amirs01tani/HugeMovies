@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoviesView<Content: View>: View {
-    @State var viewModel = MoviesViewModel(loader: MoviesSampleData())
+    @StateObject var viewModel = MoviesViewModel(loader: MoviesSampleData())
     let content: (MovieViewModel) -> Content
     
     var body: some View {

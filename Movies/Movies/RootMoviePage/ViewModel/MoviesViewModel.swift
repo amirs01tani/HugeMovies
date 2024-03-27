@@ -7,10 +7,10 @@
 
 import Foundation
 
-@Observable class MoviesViewModel {
+class MoviesViewModel: ObservableObject {
     let loader: MovieDataLoader
-    var selectedMovie: MovieViewModel?
-    var state: State
+    @Published var selectedMovie: MovieViewModel?
+    @Published var state: State
     
     enum State {
         case enquery
