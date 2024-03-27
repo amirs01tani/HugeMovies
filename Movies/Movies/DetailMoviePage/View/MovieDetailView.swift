@@ -10,7 +10,8 @@ import SwiftUI
 
 struct MovieDetailView: View {
     var viewModel: MovieViewModel
-    
+    let imageHeight: CGFloat = 500
+    let scrollViewPadding: CGFloat = 24
     var body: some View {
         ScrollView {
             HStack {
@@ -20,11 +21,11 @@ struct MovieDetailView: View {
             }
             Text(viewModel.description)
                 .font(.subheadline)
-            makeImageView(imageURL: viewModel.thumbURL, blurRadius: 0, height: 500)
-                .frame(height: 500)
+            makeImageView(imageURL: viewModel.thumbURL, blurRadius: 0, height: imageHeight)
+                .frame(height: imageHeight)
             
-        }.padding(.horizontal, 24)
-        .navigationTitle(viewModel.title)
+        }.padding(.horizontal, scrollViewPadding)
+        .navigationTitle(viewModel.navTitle)
     }
 }
 

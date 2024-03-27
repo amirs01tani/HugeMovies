@@ -177,19 +177,11 @@
 		29673EEF2BB3DB3700005D42 /* DetailMoviePage */ = {
 			isa = PBXGroup;
 			children = (
-				29673EF02BB3DB5500005D42 /* Coordinator */,
 				29673EF42BB3DB5500005D42 /* Model */,
 				29673EF12BB3DB5500005D42 /* ViewModel */,
 				29673EF72BB3DB5500005D42 /* View */,
 			);
 			path = DetailMoviePage;
-			sourceTree = "<group>";
-		};
-		29673EF02BB3DB5500005D42 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		29673EF12BB3DB5500005D42 /* ViewModel */ = {
