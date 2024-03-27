@@ -73,12 +73,4 @@ struct MoviesSampleData: movieDataLoader {
             
         ]
     }
-    subscript(id: UUID) -> MovieViewModel? {
-        if let movie = MoviesSampleData.getData().first (where: { movie in
-            movie.id == id
-        }) {
-            return MovieViewModel(movie: movie)
-        }
-        return nil
-    }
 }

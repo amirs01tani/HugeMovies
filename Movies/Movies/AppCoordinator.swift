@@ -32,6 +32,3 @@ enum Page: Identifiable, Hashable {
         }
     }
 }
-
-
-
