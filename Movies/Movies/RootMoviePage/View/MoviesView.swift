@@ -12,16 +12,24 @@ struct MoviesView<Content: View>: View {
     let content: (MovieViewModel) -> Content
     
     var body: some View {
-        NavigationSplitView {
-            List(viewModel.fetchData(), selection: $viewModel.selectedMovie) { movie in
-                NavigationLink(value: movie) {
-                    MovieCellView(movieViewModel: movie)
+        switch viewModel.state {
+        case .enquery:
+            ProgressView()
+                .task {
+                    await viewModel.fetchData()
                 }
-            }
-            .navigationTitle(viewModel.navTitle)
-        } detail: {
-            if let selected = viewModel.selectedMovie {
-                content(selected)
+        case .received(let movies):
+            NavigationSplitView {
+                List(movies, selection: $viewModel.selectedMovie) { movie in
+                    NavigationLink(value: movie) {
+                        MovieCellView(movieViewModel: movie)
+                    }
+                }
+                .navigationTitle(viewModel.navTitle)
+            } detail: {
+                if let selected = viewModel.selectedMovie {
+                    content(selected)
+                }
             }
         }
     }

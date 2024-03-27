@@ -10,13 +10,20 @@ import Foundation
 @Observable class MoviesViewModel {
     let loader: MovieDataLoader
     var selectedMovie: MovieViewModel?
+    var state: State
+    
+    enum State {
+        case enquery
+        case received(data: [MovieViewModel])
+    }
     
     init(loader: MovieDataLoader) {
+        state = .enquery
         self.loader = loader
     }
     
-    func fetchData() -> [MovieViewModel] {
-        loader.getData().map({ MovieViewModel(movie: $0) })
+    func fetchData() async {
+        state = .received(data: await loader.getData().map { MovieViewModel(movie: $0) })
     }
     
     var navTitle: String {

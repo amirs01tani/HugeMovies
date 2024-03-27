@@ -8,11 +8,11 @@
 import Foundation
 
 protocol MovieDataLoader {
-    func getData() -> [Movie]
+    func getData() async -> [Movie]
 }
 
 struct MoviesSampleData: MovieDataLoader {
-    func getData() -> [Movie] {
+    func getData() async -> [Movie] {
         return [
             Movie(id: UUID(),
                   title: "Damsel",

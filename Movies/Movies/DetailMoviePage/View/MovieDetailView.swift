@@ -28,7 +28,3 @@ struct MovieDetailView: View {
         .navigationTitle(viewModel.navTitle)
     }
 }
-
-#Preview {
-    MovieDetailView(viewModel: MovieViewModel(movie: MoviesSampleData().getData()[0]))
-}
