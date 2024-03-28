@@ -90,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		294406CE2BB61F23001F8A62 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				29673F042BB40F7600005D42 /* AppCoordinator.swift */,
+				29673F062BB416E200005D42 /* CoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		29673EA72BB30C4900005D42 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				29673EB32BB30C4900005D42 /* MoviesApp.swift */,
-				29673F042BB40F7600005D42 /* AppCoordinator.swift */,
-				29673F062BB416E200005D42 /* CoordinatorView.swift */,
+				294406CE2BB61F23001F8A62 /* Coordinator */,
 				29673F082BB4288600005D42 /* SharedViewHelpers */,
 				29673EEE2BB3DB0F00005D42 /* RootMoviePage */,
 				29673EEF2BB3DB3700005D42 /* DetailMoviePage */,
