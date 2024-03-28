@@ -25,10 +25,17 @@ enum Page: Identifiable, Hashable {
     func build(page: Page) -> some View {
         switch page {
         case .root:
-            let viewModel = MoviesViewModel(loader: MoviesSampleData())
-            MoviesView<MovieDetailView>(viewModel: viewModel) { selectedMovie in
+            PageFactory().makeRootViewController(didSelectAMovie: { selectedMovie in
                 return MovieDetailView(viewModel: selectedMovie)
-            }
+            })
         }
     }
 }
+
+struct PageFactory {
+    func makeRootViewController(didSelectAMovie: @escaping (MovieViewModel)-> MovieDetailView) -> MoviesView<MovieDetailView> {
+        let viewModel = MoviesViewModel(loader: MoviesSampleData())
+        return MoviesView<MovieDetailView>(viewModel: viewModel, content: didSelectAMovie)
+    }
+}
+
