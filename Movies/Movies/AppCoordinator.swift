@@ -18,7 +18,7 @@ enum Page: Identifiable, Hashable {
     }
 }
     
-@Observable class AppCoordinator {
+class AppCoordinator {
     var path = NavigationPath()
     
     @ViewBuilder
