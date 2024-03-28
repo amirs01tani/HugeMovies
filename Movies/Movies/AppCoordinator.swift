@@ -25,7 +25,8 @@ enum Page: Identifiable, Hashable {
     func build(page: Page) -> some View {
         switch page {
         case .root:
-            MoviesView<MovieDetailView> { selectedMovie in
+            let viewModel = MoviesViewModel(loader: MoviesSampleData())
+            MoviesView<MovieDetailView>(viewModel: viewModel) { selectedMovie in
                 return MovieDetailView(viewModel: selectedMovie)
             }
         }
