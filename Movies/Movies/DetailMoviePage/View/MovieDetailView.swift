@@ -23,7 +23,7 @@ struct MovieDetailView: View {
             }
             Text(viewModel.description)
                 .font(.subheadline)
-            makeImageView(imageURL: viewModel.thumbURL, blurRadius: 0, height: imageHeight)
+            makeImageView(imageURL: viewModel.thumbURL, blurRadius: 0, width: .infinity, height: imageHeight)
                 .frame(height: imageHeight)
             
         }.padding(.horizontal, scrollViewPadding)

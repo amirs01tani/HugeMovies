@@ -24,6 +24,7 @@ struct MoviesView<Content: View>: View {
                     NavigationLink(value: movie) {
                         MovieCellView(movieViewModel: movie)
                     }
+                    .listRowSeparator(.hidden)
                 }
                 .navigationTitle(viewModel.navTitle)
             } detail: {

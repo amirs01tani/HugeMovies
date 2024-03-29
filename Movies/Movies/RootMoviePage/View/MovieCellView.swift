@@ -19,17 +19,18 @@ struct MovieCellView: View {
                 .customText()
                 .foregroundStyle(.primary)
                 .font(.title)
-                .padding([.top], 8)
+                .padding([.top, .leading], 8)
             Spacer()
             HStack {
                 Spacer()
                 Text(movieViewModel.cellYear)
                     .customText()
                     .foregroundStyle(.secondary)
-                    .padding(.bottom, 8)
+                    .padding([.bottom, .trailing], 8)
                 
             }
-        }.frame(height: cellHeight)
-            .background(makeImageView(imageURL: movieViewModel.thumbURL, height: backgroundImageHeight))
+        }
+        .frame(height: cellHeight)
+        .background(makeImageView(imageURL: movieViewModel.thumbURL, width: .infinity, height: backgroundImageHeight))
     }
 }

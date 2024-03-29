@@ -18,8 +18,8 @@ enum Page: Identifiable, Hashable {
     }
 }
     
-class AppCoordinator {
-    var path = NavigationPath()
+class AppCoordinator: ObservableObject {
+    @Published var path = NavigationPath()
     
     @ViewBuilder
     func build(page: Page) -> some View {

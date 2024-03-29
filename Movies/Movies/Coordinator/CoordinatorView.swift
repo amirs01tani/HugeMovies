@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CoordinatorView: View {
-    @State var coordinator = AppCoordinator()
+    @StateObject var coordinator = AppCoordinator()
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             coordinator.build(page: .root)

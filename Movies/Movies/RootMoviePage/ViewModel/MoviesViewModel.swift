@@ -23,7 +23,10 @@ class MoviesViewModel: ObservableObject {
     }
     
     func fetchData() async {
-        state = .received(data: await loader.getData().map { MovieViewModel(movie: $0) })
+        let data = await loader.getData()
+        await MainActor.run {
+            state = .received(data: data.map { MovieViewModel(movie: $0) })
+        }
     }
     
     var navTitle: String {
