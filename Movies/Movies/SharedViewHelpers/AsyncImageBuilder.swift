@@ -19,8 +19,11 @@ func makeImageView(imageURL: String, blurRadius: CGFloat = 4.0, width: CGFloat, 
                 .blur(radius: blurRadius)
         } else if phase.error != nil {
             // Display a placeholder when loading failed
-            Image(systemName: "movieclapper")
-                .imageScale(.large)
+            ZStack {
+                Color.random().opacity(0.3)
+                Image(systemName: "movieclapper")
+                    .imageScale(.large)
+            }
         } else {
             // Display a placeholder while loading
             ProgressView()

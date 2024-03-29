@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290987672BB787C100B11619 /* Color+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290987662BB787C100B11619 /* Color+Helper.swift */; };
 		294406CD2BB61E42001F8A62 /* PageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294406CC2BB61E42001F8A62 /* PageFactory.swift */; };
 		294406D02BB61F8E001F8A62 /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 294406CF2BB61F8E001F8A62 /* ReadMe.rtf */; };
 		29673EB42BB30C4900005D42 /* MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29673EB32BB30C4900005D42 /* MoviesApp.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290987662BB787C100B11619 /* Color+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Helper.swift"; sourceTree = "<group>"; };
 		294406CC2BB61E42001F8A62 /* PageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFactory.swift; sourceTree = "<group>"; };
 		294406CF2BB61F8E001F8A62 /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
 		29673EB02BB30C4900005D42 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +215,7 @@
 			children = (
 				29673F092BB428B500005D42 /* AsyncImageBuilder.swift */,
 				29673F0D2BB42A0900005D42 /* CustomTextViewBuilder.swift */,
+				290987662BB787C100B11619 /* Color+Helper.swift */,
 			);
 			path = SharedViewHelpers;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				29673F0E2BB42A0900005D42 /* CustomTextViewBuilder.swift in Sources */,
 				29673F052BB40F7600005D42 /* AppCoordinator.swift in Sources */,
 				29673F0A2BB428B500005D42 /* AsyncImageBuilder.swift in Sources */,
+				290987672BB787C100B11619 /* Color+Helper.swift in Sources */,
 				294406CD2BB61E42001F8A62 /* PageFactory.swift in Sources */,
 				29673F072BB416E200005D42 /* CoordinatorView.swift in Sources */,
 				29673EFB2BB3DBBD00005D42 /* MovieDetailView.swift in Sources */,
