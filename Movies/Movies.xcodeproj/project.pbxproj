@@ -102,6 +102,13 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		294406D12BB6ADDF001F8A62 /* MoviesViewSnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MoviesViewSnapshotTests;
+			sourceTree = "<group>";
+		};
 		29673EA72BB30C4900005D42 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +155,7 @@
 		29673EC42BB30C4A00005D42 /* MoviesTests */ = {
 			isa = PBXGroup;
 			children = (
+				294406D12BB6ADDF001F8A62 /* MoviesViewSnapshotTests */,
 				29673EC52BB30C4A00005D42 /* MoviesTests.swift */,
 			);
 			path = MoviesTests;

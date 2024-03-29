@@ -63,7 +63,13 @@ struct MoviesSampleData: MovieDataLoader {
                   description: "An Interpol agent successfully tracks down the world's most wanted art thief with help from a rival thief. But nothing is as it seems as a series of double-crosses ensues.",
                   thumbURL: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQhvhGPc-Ah_VD5MzYy2xw63B0Su_gnvSYNJ6Ud_N_FIsxWF4gE"),
             
-            Movie(id: UUID(), title: "Lift", year: "2024", genre: "Crime", description: "Follows a master thief and his Interpol Agent ex-girlfriend who team up to steal $500 million in gold bullion being transported on an A380 passenger flight.", thumbURL: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQVISWRRnthAAYSh55ArjXu1XoS9PYPKinHREKhicSncQLF0Xck"),
+            Movie(id: UUID(),
+                  title: "Lift",
+                  year: "2024",
+                  genre: "Crime",
+                  description: "Follows a master thief and his Interpol Agent ex-girlfriend who team up to steal $500 million in gold bullion being transported on an A380 passenger flight.",
+                  thumbURL: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQVISWRRnthAAYSh55ArjXu1XoS9PYPKinHREKhicSncQLF0Xck"),
+            
             Movie(id: UUID(),
                   title: "AMAR",
                   year: "2017",
